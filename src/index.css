@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply min-w-[320px] bg-stone-50 font-sans text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer components {
+  .surface { @apply rounded-[1.75rem] border border-white/80 bg-white/90 shadow-card backdrop-blur-sm dark:border-white/10 dark:bg-slate-900/80; }
+  .section-label { @apply mb-3 text-[0.69rem] font-bold uppercase tracking-[0.19em] text-sky-600 dark:text-sky-400; }
+}
+
+::selection { background: #bae6fd; color: #0f172a; }
+::-webkit-scrollbar { width: 10px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { border: 3px solid transparent; border-radius: 999px; background: rgba(100,116,139,.38); background-clip: padding-box; }
